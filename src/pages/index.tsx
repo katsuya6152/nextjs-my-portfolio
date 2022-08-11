@@ -1,7 +1,9 @@
+import { Stack } from '@mui/material'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 
+
+import About from '@/components/About'
 import Header from '@/components/Header'
 import styles from '@/styles/Home.module.css'
 
@@ -15,7 +17,17 @@ const Home: NextPage = () => {
         <meta name='keywords' content='Engineer,エンジニア,フロントエンド,ポートフォリオ' />
       </Head>
       <Header />
-      <main></main>
+
+      <main>
+        <Stack 
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+          spacing={4}
+        >
+          <About />
+        </Stack>
+      </main>
 
       <footer></footer>
     </div>
