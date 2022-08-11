@@ -87,11 +87,10 @@ const About = () => {
           >
             <Stack sx={{ alignItems: 'center' }}>
               <h1>ABOUT</h1>
-              <Stack
-                direction={'row'}
-                spacing={12}
-                sx={{ alignItems: 'center', justifyContent: 'center' }}
-              >
+              <Stack spacing={6} sx={{ alignItems: 'center', justifyContent: 'center' }}>
+                <Box sx={{ display: 'block', width: '25%' }}>
+                  <Image src={imagePath} alt='My Image' />
+                </Box>
                 <Stack>
                   <Stack>
                     <p>出身：日本/宮崎県</p>
