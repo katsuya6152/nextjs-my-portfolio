@@ -2,7 +2,6 @@ import { Stack } from '@mui/material'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-
 import About from '@/components/About'
 import Header from '@/components/Header'
 import styles from '@/styles/Home.module.css'
@@ -19,12 +18,7 @@ const Home: NextPage = () => {
       <Header />
 
       <main>
-        <Stack 
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-          spacing={4}
-        >
+        <Stack direction='column' justifyContent='center' alignItems='center' spacing={4}>
           <About />
         </Stack>
       </main>
