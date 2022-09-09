@@ -4,6 +4,7 @@ import Head from 'next/head'
 
 import About from '@/components/About'
 import Header from '@/components/Header'
+import LastImage from '@/components/LastImage'
 import styles from '@/styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -16,10 +17,11 @@ const Home: NextPage = () => {
         <meta name='keywords' content='Engineer,エンジニア,フロントエンド,ポートフォリオ' />
       </Head>
       <Header />
-
       <main>
-        <Stack direction='column' justifyContent='center' alignItems='center' spacing={4}>
+        <Stack direction='column' justifyContent='center' alignItems='center' spacing={16}>
           <About />
+
+          <LastImage/>
         </Stack>
       </main>
 
