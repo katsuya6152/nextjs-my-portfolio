@@ -3,11 +3,11 @@ import Paper from '@mui/material/Paper'
 import Stack from '@mui/material/Stack'
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles'
 
-const Certification = () => {
+const Certification = (props: certificationProps) => {
   const darkTheme = createTheme({ palette: { mode: 'dark' } })
   return (
     <>
-      <Box sx={{ width: '100%' }}>
+      <Box id={props.id} sx={{ width: '100%' }}>
         <ThemeProvider theme={darkTheme}>
           <Paper
             elevation={12}
@@ -43,3 +43,7 @@ const Certification = () => {
 }
 
 export default Certification
+
+type certificationProps = {
+  id: string
+}

@@ -13,8 +13,9 @@ import Typography from '@mui/material/Typography'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { Stack } from '@mui/system'
 import { useState } from 'react'
+import { Link as Scroll } from 'react-scroll'
 
-const pages = ['About', 'Award', 'Qualification', 'Contact']
+const pages = ['About', 'Award', 'Certification', 'Contact']
 
 const theme = createTheme({
   palette: {
@@ -59,15 +60,14 @@ const Header = () => {
       <AppBar position='sticky' color='neutral'>
         <Container maxWidth='xl'>
           <Toolbar disableGutters>
-            <MoodIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            {/* PC */}
+            <MoodIcon sx={{ display: { xs: 'none', lg: 'flex' }, mr: 1 }} />
             <Typography
               variant='h6'
               noWrap
-              component='a'
-              href='/'
               sx={{
                 mr: 2,
-                display: { xs: 'none', md: 'flex' },
+                display: { xs: 'none', lg: 'flex' },
                 fontFamily: 'monospace',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
@@ -77,7 +77,43 @@ const Header = () => {
             >
               Katsuya Suzuki
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Stack
+              direction='row'
+              justifyContent='flex-end'
+              sx={{ flexGrow: 1, display: { xs: 'none', lg: 'flex' } }}
+            >
+              {pages.map((page) => (
+                <Button key={page} sx={{ my: 2, color: 'white', display: 'block' }}>
+                  <Scroll to={`${page}`} smooth={true} duration={600} offset={-190}>
+                    {page}
+                  </Scroll>
+                </Button>
+              ))}
+            </Stack>
+
+            {/* SP */}
+            <MoodIcon sx={{ display: { xs: 'flex', lg: 'none' }, mr: 1 }} />
+            <Typography
+              variant='h5'
+              noWrap
+              component='a'
+              href=''
+              sx={{
+                mr: 2,
+                display: { xs: 'flex', lg: 'none' },
+                flexGrow: 1,
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              Katsuya Suzuki
+            </Typography>
+            <Box
+              sx={{ flexGrow: 1, display: { xs: 'flex', lg: 'none' }, justifyContent: 'flex-end' }}
+            >
               <IconButton
                 size='large'
                 aria-label='account of current user'
@@ -93,61 +129,30 @@ const Header = () => {
                 anchorEl={anchorElNav}
                 anchorOrigin={{
                   vertical: 'bottom',
-                  horizontal: 'left',
+                  horizontal: 'right',
                 }}
                 keepMounted
                 transformOrigin={{
                   vertical: 'top',
-                  horizontal: 'left',
+                  horizontal: 'right',
                 }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
                 sx={{
-                  display: { xs: 'block', md: 'none' },
+                  display: { xs: 'block', lg: 'none' },
                 }}
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign='center'>{page}</Typography>
+                    <nav>
+                      <Scroll to={`${page}`} smooth={true} duration={600}>
+                        {page}
+                      </Scroll>
+                    </nav>
                   </MenuItem>
                 ))}
               </Menu>
             </Box>
-
-            <MoodIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-            <Typography
-              variant='h5'
-              noWrap
-              component='a'
-              href=''
-              sx={{
-                mr: 2,
-                display: { xs: 'flex', md: 'none' },
-                flexGrow: 1,
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              Katsuya Suzuki
-            </Typography>
-            <Stack
-              direction='row'
-              justifyContent='flex-end'
-              sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
-            >
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
-                >
-                  {page}
-                </Button>
-              ))}
-            </Stack>
           </Toolbar>
         </Container>
       </AppBar>
