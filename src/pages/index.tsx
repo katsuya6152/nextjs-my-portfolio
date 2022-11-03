@@ -6,7 +6,7 @@ import About from '@/components/About'
 import Award from '@/components/Award/Award'
 import Certification from '@/components/Certification'
 import Header from '@/components/Header'
-import LastImage from '@/components/LastImage'
+import LastImage from '@/components/Image/LastImage'
 import styles from '@/styles/Home.module.css'
 
 const Home: NextPage = () => {
