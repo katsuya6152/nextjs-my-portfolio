@@ -35,20 +35,21 @@ const Award = () => {
                 sx={{ alignItems: 'center', justifyContent: 'center' }}
               >
                 <Stack spacing={6}>
-                  <Link href={'https://signate.jp/competitions/449'}>
-                    <a className={styles.link}>
+                  <Link href={'https://signate.jp/competitions/449'} passHref>
+                    <a target='_blank' className={styles.link}>
                       <span>SIGNATE Student Cup 2021春【予測部門】(1位)</span>
                     </a>
                   </Link>
                   <Link
                     href={'https://www.kaggle.com/competitions/ai-medical-contest-2022/overview'}
+                    passHref
                   >
-                    <a className={styles.link}>
+                    <a target='_blank' className={styles.link}>
                       <span>全国医療AIコンテスト2022 (9位)</span>
                     </a>
                   </Link>
-                  <Link href={'https://www.jdla.org/cdle-youth-hackathon/'}>
-                    <a className={styles.link}>
+                  <Link href={'https://www.jdla.org/cdle-youth-hackathon/'} passHref>
+                    <a target='_blank' className={styles.link}>
                       <span>
                         リテールAIハッカソン2022 <br /> (1stステージ 21位　2ndステージ Goto賞)
                       </span>
