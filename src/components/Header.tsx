@@ -9,13 +9,12 @@ import IconButton from '@mui/material/IconButton'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import Toolbar from '@mui/material/Toolbar'
-import Tooltip from '@mui/material/Tooltip'
 import Typography from '@mui/material/Typography'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { Stack } from '@mui/system'
 import { useState } from 'react'
 
-const pages = ['About', 'History', 'Qualification', 'Award', 'Output', 'Contact']
+const pages = ['About', 'Award', 'Qualification', 'Contact']
 
 const theme = createTheme({
   palette: {
