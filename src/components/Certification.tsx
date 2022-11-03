@@ -2,15 +2,8 @@ import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
 import Stack from '@mui/material/Stack'
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles'
-import Grid from '@mui/system/Unstable_Grid'
 
-const Item = styled('div')(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  padding: theme.spacing(1),
-  textAlign: 'left',
-}))
-
-const History = () => {
+const Certification = () => {
   const darkTheme = createTheme({ palette: { mode: 'dark' } })
   return (
     <>
@@ -26,8 +19,21 @@ const History = () => {
             }}
           >
             <Stack sx={{ alignItems: 'center' }}>
-              <h1>HISTORY</h1>
-
+              <h1>Certification</h1>
+              <Stack
+                direction={'row'}
+                spacing={12}
+                sx={{ alignItems: 'center', justifyContent: 'center' }}
+              >
+                <Stack>
+                  <Stack>
+                    <p>統計検定2級</p>
+                    <p>基本情報技術者試験</p>
+                    <p>JDLA Deep Learning for ENGINEER 2021#1(E資格)</p>
+                    <p>Python3エンジニア認定データ分析試験</p>
+                  </Stack>
+                </Stack>
+              </Stack>
             </Stack>
           </Paper>
         </ThemeProvider>
@@ -36,4 +42,4 @@ const History = () => {
   )
 }
 
-export default History
+export default Certification

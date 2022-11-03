@@ -3,9 +3,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import About from '@/components/About'
-import Award from '@/components/Award'
+import Award from '@/components/Award/Award'
+import Certification from '@/components/Certification'
 import Header from '@/components/Header'
-import History from '@/components/History'
 import LastImage from '@/components/LastImage'
 import styles from '@/styles/Home.module.css'
 
@@ -27,15 +27,12 @@ const Home: NextPage = () => {
             spacing={8}
             sx={{ width: 1 / 2, display: { xs: 'none', lg: 'flex' } }}
           >
-            <History />
             <Award />
+            <Certification />
           </Stack>
-          <Stack
-            spacing={8}
-            sx={{ width: 6 / 7, display: { xs: 'flex', lg: 'none' } }}
-          >
-            <History />
+          <Stack spacing={8} sx={{ width: 6 / 7, display: { xs: 'flex', lg: 'none' } }}>
             <Award />
+            <Certification />
           </Stack>
           <LastImage />
         </Stack>

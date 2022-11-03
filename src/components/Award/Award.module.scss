@@ -1,0 +1,14 @@
+.link,
+.link span {
+  display: inline-block;
+}
+.link span {
+  transition: 0.5s;
+  text-decoration: underline;
+}
+.link:hover span {
+  color: #04a9f4;
+  text-decoration: underline;
+  -webkit-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+}
