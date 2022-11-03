@@ -21,18 +21,18 @@ const Home: NextPage = () => {
       <Header />
       <main>
         <Stack direction='column' justifyContent='center' alignItems='center' spacing={16}>
-          <About />
+          <About id='About' />
           <Stack
             direction='row'
             spacing={8}
             sx={{ width: 1 / 2, display: { xs: 'none', lg: 'flex' } }}
           >
-            <Award />
-            <Certification />
+            <Award id='Award' />
+            <Certification id='Certification' />
           </Stack>
           <Stack spacing={8} sx={{ width: 6 / 7, display: { xs: 'flex', lg: 'none' } }}>
-            <Award />
-            <Certification />
+            <Award id='Award' />
+            <Certification id='Certification' />
           </Stack>
           <LastImage />
         </Stack>

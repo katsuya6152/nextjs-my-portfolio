@@ -30,10 +30,10 @@ const skills: Array<string> = [
   'ML/DL',
 ]
 
-const About = () => {
+const About = (props: aboutProps) => {
   return (
     <>
-      <Box sx={{ width: 1 / 2, mt: 8, display: { xs: 'none', lg: 'flex' } }}>
+      <Box id={props.id} sx={{ width: 1 / 2, mt: 8, display: { xs: 'none', lg: 'flex' } }}>
         <ThemeProvider theme={darkTheme}>
           <Paper
             elevation={12}
@@ -75,7 +75,7 @@ const About = () => {
           </Paper>
         </ThemeProvider>
       </Box>
-      <Box sx={{ width: 6 / 7, mt: 8, display: { xs: 'block', lg: 'none' } }}>
+      <Box id={props.id} sx={{ width: 6 / 7, mt: 8, display: { xs: 'block', lg: 'none' } }}>
         <ThemeProvider theme={darkTheme}>
           <Paper
             elevation={12}
@@ -118,3 +118,7 @@ const About = () => {
 }
 
 export default About
+
+type aboutProps = {
+  id: string
+}

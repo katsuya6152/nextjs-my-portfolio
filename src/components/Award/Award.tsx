@@ -12,11 +12,11 @@ const Item = styled('div')(({ theme }) => ({
   textAlign: 'left',
 }))
 
-const Award = () => {
+const Award = (props: awardProps) => {
   const darkTheme = createTheme({ palette: { mode: 'dark' } })
   return (
     <>
-      <Box sx={{ width: '100%' }}>
+      <Box id={props.id} sx={{ width: '100%' }}>
         <ThemeProvider theme={darkTheme}>
           <Paper
             elevation={12}
@@ -66,3 +66,7 @@ const Award = () => {
 }
 
 export default Award
+
+type awardProps = {
+  id: string
+}
