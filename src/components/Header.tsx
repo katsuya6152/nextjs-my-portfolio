@@ -15,7 +15,7 @@ import { Stack } from '@mui/system'
 import { useState } from 'react'
 import { Link as Scroll } from 'react-scroll'
 
-const pages = ['About', 'Award', 'Certification', 'Contact']
+const pages = ['About', 'Achievements', 'Certification', 'Contact']
 
 const theme = createTheme({
   palette: {
