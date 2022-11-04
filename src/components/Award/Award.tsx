@@ -28,7 +28,7 @@ const Award = (props: awardProps) => {
             }}
           >
             <Stack sx={{ alignItems: 'center' }}>
-              <h1>Award</h1>
+              <h1>Achievements</h1>
               <Stack
                 direction={'row'}
                 spacing={12}
