@@ -27,11 +27,11 @@ const Home: NextPage = () => {
             spacing={8}
             sx={{ width: 1 / 2, display: { xs: 'none', lg: 'flex' } }}
           >
-            <Award id='Award' />
+            <Award id='Achievements' />
             <Certification id='Certification' />
           </Stack>
           <Stack spacing={8} sx={{ width: 6 / 7, display: { xs: 'flex', lg: 'none' } }}>
-            <Award id='Award' />
+            <Award id='Achievements' />
             <Certification id='Certification' />
           </Stack>
           <LastImage />
